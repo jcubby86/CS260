@@ -1,0 +1,77 @@
+* {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.navigation {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation>a {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 18px;
+}
+
+.navigation>a:hover, .navigation>a.login:hover {
+    color: gray;
+    border-color: gray;
+}
+.navigation>a.login{
+    color:black;
+    border-color: black;
+}
+
+.main{
+    width: 35%;
+    margin-left: 40px;
+}
+
+.site {
+    width: 100%;
+    font-size: 48px;
+    text-decoration: underline;
+}
+
+.motto {
+    width: 100%;
+    font-size: 24px;
+}
+
+.free {
+    margin-top: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.free>a {
+    color:black;
+    font-size: 30px;
+    padding:10px;
+    background-color: orange;
+    border: 2px solid orange;
+    border-radius: 10px;
+}
+
+.free>a:hover {
+    color:gray;
+}
+
+.content {
+    background-image:url("/images/pexels-cats-coming-1543793.jpg");
+    background-color: lightblue; /* Used if the image is unavailable */
+    height: 1000px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
