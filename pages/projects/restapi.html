@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>XKCD</title>
+
+<body>
+
+  <p>Fun Fact</p>
+  <div id="fact">Loading...</div>
+</body>
+
+<script>
+  const myurl = "https://asli-fun-fact-api.herokuapp.com";
+  console.log(myurl);
+  fetch(myurl)
+    .then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      console.log(json);
+      const container = document.getElementById("fact");
+      const factObj = json["data"];
+      const data = document.createTextNode("Fact " + factObj["id"] + ": " + factObj["fact"]);
+      container.textContent = "";
+      container.appendChild(data);
+    });
+</script>
+
+</html>
