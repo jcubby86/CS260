@@ -62,7 +62,7 @@ function addSpan(parent, text, load) {
 function addul(parent, object, doNested) {
   const ul = parent.appendChild(document.createElement('ul'));
   ul.classList.add('nested');
-  nestedItems = [];
+  let nestedItems = [];
   for (const key in object) {
     if (nested.includes(key)) {
       if (doNested && (key == "homeworld" || object[key].length > 0)) {
