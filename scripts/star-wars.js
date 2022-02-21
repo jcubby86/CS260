@@ -4,7 +4,7 @@ function addNestedItem(property, object){
   newul.classList.add('nested');
   
   const span = addSpan(li, formatProperty(property), (span) => {
-    console.log(span.textContent);
+    //console.log(span.textContent);
     for (const i in object[property]){
       const newli = newul.appendChild(document.createElement('li'));
       if (i == object[property].length - 1){
@@ -14,7 +14,7 @@ function addNestedItem(property, object){
         .then((response) => {return response.json()})
         .then((json) => {
           newli.textContent = '';
-          console.log(json);
+          //console.log(json);
           addSpan(newli, json.result.properties.name);
           addul(newli, json.result.properties, false);
         });
